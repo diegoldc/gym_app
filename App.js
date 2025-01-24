@@ -10,7 +10,7 @@ export default function App() {
     <SafeAreaProvider>
       <View style={styles.container}>
         <StatusBar style="auto" />
-        {/* <Main /> */}
+        <Main />
         <Admin />
         <LoginScreen />
       </View>

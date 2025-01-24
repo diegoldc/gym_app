@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "859481337223",
+    "project_id": "calistenia-zaragoza",
+    "storage_bucket": "calistenia-zaragoza.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:859481337223:android:573f6922953799b4c1f722",
+        "android_client_info": {
+          "package_name": "com.calistenia.zaragoza"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmiXSoIypyUT6N9D5fSXkmgo0SrwNYSk8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

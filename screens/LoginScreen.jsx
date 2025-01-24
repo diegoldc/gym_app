@@ -1,9 +1,13 @@
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { app, db } from "../firebase-config";
+import { app, db, auth } from "../firebase-config";
 import { useState } from "react";
 import { View, Text, TextInput, Button, Alert, StyleSheet } from "react-native";
 import { doc, getDoc } from "firebase/firestore";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import {
+  initializeAuth,
+  getReactNativePersistence,
+} from "@react-native-firebase/auth";
 /* @firebase/auth: Auth (11.2.0):
 You are initializing Firebase Auth for React Native without providing
 AsyncStorage. Auth state will default to memory persistence and will not
@@ -11,12 +15,11 @@ persist between sessions. In order to persist auth state, install the package
 "@react-native-async-storage/async-storage" and provide it to
 initializeAuth:
 
-import { initializeAuth, getReactNativePersistence } from 'firebase/auth';
 import ReactNativeAsyncStorage from '@react-native-async-storage/async-storage';
 const auth = initializeAuth(app, {
   persistence: getReactNativePersistence(ReactNativeAsyncStorage)
 }); */
-const auth = getAuth(app);
+// const auth = getAuth(app);
 
 export default function LoginScreen() {
   const [mail, setMail] = useState("");

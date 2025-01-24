@@ -21,10 +21,10 @@ import {
   deleteDoc,
 } from "firebase/firestore";
 
-export function Main() {
+export default function Main() {
   const insets = useSafeAreaInsets();
   const [users, setUsers] = useState([]); // Estado para guardar los usuarios
-
+  // READ
   useEffect(() => {
     // Función que obtiene la lista de usuarios
     const q = query(
@@ -51,19 +51,19 @@ export function Main() {
     // Limpieza de la suscripción al desmontar el componente
     return () => unsubscribe();
   }, []);
-
+  // DELETE
   const eliminarUsuario = (id) => {
     const docRef = doc(db, "users", id);
     deleteDoc(docRef);
   };
-
+  // UPDATE
   const hacerAdmin = (id) => {
     const docRef = doc(db, "users", id);
     updateDoc(docRef, {
       is_admin: true,
     });
   };
-
+  // CREATE
   const crearReservaNueva = async (id) => {
     try {
       const newReservation = {
